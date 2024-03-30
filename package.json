@@ -1,0 +1,23 @@
+{
+	"name": "your-lms",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"concurrently": "^6.2.1"
+	},
+	"devDependencies": {},
+	"scripts": {
+		"install frontend": "cd ./frontend && npm install",
+		"frontend": "cd ./frontend && npm start",
+		"install backend": "cd ./backend && npm install",
+		"backend": "cd ./backend && nodemon -r esm server.js",
+		"dev": "concurrently \"npm run frontend\" \"npm run backend\"",
+		"install all": "concurrently \"npm run install frontend\" \"npm run install backend\""
+	},
+	
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+	
+}
